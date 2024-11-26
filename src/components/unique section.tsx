@@ -20,7 +20,7 @@ export default function UniqueSection() {
   return (
     <section className="pt-24">
       <h2 className="text-2xl text-center font-serif font-medium text-muted-foreground">
-        Why we're different
+        Why we&apos;re different
       </h2>
       <div className="flex flex-col items-center justify-center space-y-8">
         {whys.map((why, i) => {

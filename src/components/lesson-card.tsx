@@ -1,4 +1,4 @@
-import { Book, ChevronRight } from "lucide-react";
+import { Book, ChevronRight, LucideIcon } from "lucide-react";
 
 // Card component for individual lessons
 export const LessonCard = ({
@@ -6,7 +6,7 @@ export const LessonCard = ({
   icon: Icon = Book,
 }: {
   title: string;
-  icon?: any;
+  icon?: LucideIcon;
 }) => {
   return (
     <div className="group h-[300px] perspective">
@@ -28,7 +28,7 @@ export const LessonCard = ({
           <h4 className="text-xl font-serif text-gray-800 mb-4">Preview</h4>
           <p className="text-gray-600">
             This is a preview of the lesson content. Here you can find more
-            details about what you'll learn in this lesson.
+            details about what you&apos;ll learn in this lesson.
           </p>
           <button className="mt-auto inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors">
             Read more in the app

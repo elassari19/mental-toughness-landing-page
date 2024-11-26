@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AppleIcon, PlayIcon } from "lucide-react";
 import appStoreSvg from "@/app/images/appstore.svg";
 import playStoreSvg from "@/app/images/playstore.svg";
 

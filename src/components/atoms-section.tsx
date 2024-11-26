@@ -5,19 +5,19 @@ import Image from "next/image";
 import chalkCircle from "@/app/images/chalk_circle.svg";
 
 const atoms = [
-  <span>
+  <span key="obvious">
     Make it <br />
     obvious.
   </span>,
-  <span>
+  <span key="attractive">
     Make it <br />
     attractive.
   </span>,
-  <span>
+  <span key="easy">
     Make it <br />
     easy.
   </span>,
-  <span>
+  <span key="satisfying">
     Make it <br />
     satisfying.
   </span>,

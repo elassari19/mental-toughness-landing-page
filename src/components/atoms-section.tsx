@@ -37,7 +37,7 @@ export default function AtomsSection() {
     const scrollPosition = container.scrollLeft;
 
     // Calculate which item is at the left edge
-    const items = Array.from(container.children);
+    const items = Array.from(container.children) as HTMLElement[];
     const itemPositions = items.map((item, index) => ({
       index,
       position: item.offsetLeft,

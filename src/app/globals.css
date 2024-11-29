@@ -3,12 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --dark-gray: #262626;
+  --muted: #26262699;
+  --black: black;
+  --light-grey: #f4f4f4;
+  --white: white;
+  --stabilitx: #ebebeb;
+  --yellow: #ffdc61;
+  --light-cream: #f7f6f4;
+
+  --background: var(--white);
+  --foreground: var(--dark-gray);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .backface-hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .perspective {
+    perspective: 1000px;
+  }
 }

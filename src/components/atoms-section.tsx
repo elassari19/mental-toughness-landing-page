@@ -113,16 +113,16 @@ export default function AtomsSection() {
   };
 
   return (
-    <section className="bg-[#262626] text-white px-8 rounded-4xl py-28 mx-4">
+    <section className="bg-dark-gray text-white rounded-4xl py-36 px-20 mx-4 -translate-y-[120px]">
       <div className="max-w-5xl mx-auto space-y-14">
-        <h2 className="font-serif text-3xl leading-tight max-w-[34rem] break-keep">
+        <h2 className="font-serif text-3xl leading-tight max-w-[35rem] break-keep">
           Atoms is the only app built on scientifically-backed laws of habit
           change
         </h2>
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex items-center space-x-14 overflow-x-auto hide-scrollbars pr-[80%] snap-x snap-mandatory touch-pan-x select-none cursor-grab active:cursor-grabbing"
+            className="flex items-center space-x-10 overflow-x-auto overflow-y-hidden hide-scrollbars pr-[80%] snap-x snap-mandatory touch-pan-x select-none cursor-grab active:cursor-grabbing"
             style={{
               scrollbarWidth: "none",
               WebkitOverflowScrolling: "touch",
@@ -142,7 +142,7 @@ export default function AtomsSection() {
                   className="flex items-center space-x-2 snap-start relative select-none"
                   style={{ scrollSnapAlign: "start" }}
                 >
-                  <span className="text-[9rem] text-yellow-400 leading-relaxed relative select-none">
+                  <span className="text-[14rem] text-yellow leading-none relative select-none">
                     {i + 1}.
                     {isActive && (
                       <Image
@@ -155,7 +155,7 @@ export default function AtomsSection() {
                       />
                     )}
                   </span>
-                  <span className="text-[3.5rem] font-bold tracking-tight min-w-content whitespace-nowrap leading-tight select-none">
+                  <span className="text-huge font-semibold tracking-tight min-w-content whitespace-nowrap leading-none select-none">
                     {atom}
                   </span>
                 </div>

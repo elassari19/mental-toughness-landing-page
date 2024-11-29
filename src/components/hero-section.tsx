@@ -18,15 +18,15 @@ export default function HeroSection() {
         </span>
       </div>
       <div className="flex flex-col items-center justify-between md:flex-row max-w-screen-lg mx-auto">
-        <div className="max-w-xl space-y-6 text-center md:text-left">
-          <h1 className="font-cooper text-4xl text-gray-900 md:text-5xl lg:text-6xl tracking-tighter">
+        <div className="max-w-lg space-y-10 text-center md:text-left">
+          <h1 className="font-cooper text-5xl lg:text-6xl tracking-tight">
             <span className="font-serif italic">Tiny changes,</span>
             <br />
             remarkable results.
           </h1>
-          <p className="text-lg text-gray-600">
-            Build good habits and break bad ones with the only app built on the
-            proven science of habit formation.
+          <p className="text-muted max-w-[30ch]">
+            Based on the easy yet proven habit change system from the NYT
+            best-seller by James Clear, Atoms is a habit app like no other.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
             <a
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="mt-10 md:mt-0">
+        <div className="mt-10 md:mt-0 z-10">
           <div className="relative mx-auto h-[600px] w-[300px] overflow-hidden rounded-[2.5rem] bg-gray-800 shadow-xl">
             <div className="absolute inset-[3px] overflow-hidden rounded-[2.3rem] bg-white">
               <img

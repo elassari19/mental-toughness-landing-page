@@ -12,19 +12,27 @@ import React from "react";
 const lessons = [
   {
     title: "Make Your Habits Fun",
-    id: 1,
+    preview: (
+      <>
+        If you're struggling to stick to a habit because it feels like a hassle,
+        then pick a different version of that habit.
+        <br />
+        Different people like different things. Find the most enjoyable version of
+        each habit you do. Make your habits fun!
+      </>
+    ),
   },
   {
     title: "Aim to Be Great in 10 Years",
-    id: 2,
+    preview: "",
   },
   {
     title: "Start Small",
-    id: 3,
+    preview: "",
   },
   {
     title: "Everything is Imperfect",
-    id: 4,
+    preview: "",
   },
 ];
 export default function Home() {
@@ -91,9 +99,9 @@ export default function Home() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {lessons.map((lesson) => (
-              <LessonCard key={lesson.id} title={lesson.title} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+            {lessons.map((lesson, i) => (
+              <LessonCard key={i} title={lesson.title} preview={lesson.preview} />
             ))}
           </div>
         </section>

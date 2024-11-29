@@ -14,7 +14,7 @@ const lessons = [
     title: "Make Your Habits Fun",
     preview: (
       <>
-        If you're struggling to stick to a habit because it feels like a hassle,
+        If you&apos;re struggling to stick to a habit because it feels like a hassle,
         then pick a different version of that habit.
         <br />
         Different people like different things. Find the most enjoyable version of

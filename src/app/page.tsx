@@ -3,6 +3,7 @@ import HeroSection from "@/components/hero-section";
 import UniqueSection from "@/components/unique section";
 import Image from "next/image";
 import Testimonials from "@/components/testimonials";
+import Footer from "@/components/footer";
 
 import appStoreSvg from "@/app/images/appstore.svg";
 import playStoreSvg from "@/app/images/playstore.svg";
@@ -38,8 +39,8 @@ const lessons = [
 ];
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
+    <div>
+      <main>
         <HeroSection />
         <AtomsSection />
         <UniqueSection />
@@ -196,6 +197,7 @@ export default function Home() {
           </div>
           <hr className="absolute w-full border-t border-black bottom-8" />
         </div>
+        <Footer />
       </main>
     </div>
   );

@@ -1,13 +1,10 @@
 import AtomsSection from "@/components/atoms-section";
 import HeroSection from "@/components/hero-section";
 import UniqueSection from "@/components/unique section";
-import Image from "next/image";
 import Testimonials from "@/components/testimonials";
 import Footer from "@/components/footer";
 import AppStoreButtons from "@/components/app-store-buttons";
 
-import appStoreSvg from "@/app/images/appstore.svg";
-import playStoreSvg from "@/app/images/playstore.svg";
 import { LessonCard } from "@/components/lesson-card";
 
 import React from "react";

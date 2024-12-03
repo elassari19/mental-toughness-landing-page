@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Twitter, Instagram, Facebook, Linkedin } from "lucide-react";
 import AppStoreButtons from "./app-store-buttons";
 

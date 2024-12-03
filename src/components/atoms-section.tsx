@@ -113,7 +113,7 @@ export default function AtomsSection() {
   };
 
   return (
-    <section className="bg-dark-gray text-white rounded-4xl py-36 px-20 mx-4 -translate-y-[120px]">
+    <section className="bg-dark-gray text-white rounded-4xl lg:py-36 py-20 px-10 md:px-20 mx-4 -translate-y-[120px]">
       <div className="max-w-5xl mx-auto space-y-14">
         <h2 className="font-serif text-3xl leading-tight max-w-[35rem] break-keep">
           Atoms is the only app built on scientifically-backed laws of habit
@@ -142,20 +142,20 @@ export default function AtomsSection() {
                   className="flex items-center space-x-2 snap-start relative select-none"
                   style={{ scrollSnapAlign: "start" }}
                 >
-                  <span className="text-[14rem] text-yellow leading-none relative select-none">
+                  <span className="text-[5rem] md:text-[10rem] lg:text-[14rem] text-yellow leading-none relative select-none">
                     {i + 1}.
                     {isActive && (
                       <Image
                         src={chalkCircle}
-                        alt="Active item indicator border border-white"
+                        alt="Active item indicator"
                         width={200}
                         height={200}
-                        className="absolute top-1/4 -tranylate-y-1/2 z-10 object-contain w-[150px]"
+                        className="absolute origin-top-right left-0 top-1/2 -translate-y-1/2 z-10 object-contain w-full"
                         draggable={false}
                       />
                     )}
                   </span>
-                  <span className="text-huge font-semibold tracking-tight min-w-content whitespace-nowrap leading-none select-none">
+                  <span className="text-4xl md:text-7xl lg:text-huge font-semibold tracking-tight min-w-content whitespace-nowrap leading-none select-none">
                     {atom}
                   </span>
                 </div>

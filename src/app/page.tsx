@@ -4,37 +4,10 @@ import UniqueSection from "@/components/unique section";
 import Testimonials from "@/components/testimonials";
 import Footer from "@/components/footer";
 import AppStoreButtons from "@/components/app-store-buttons";
-
-import { LessonCard } from "@/components/lesson-card";
+import Lessons from "@/components/lessons";
 
 import React from "react";
 
-const lessons = [
-  {
-    title: "Make Your Habits Fun",
-    preview: (
-      <>
-        If you&apos;re struggling to stick to a habit because it feels like a
-        hassle, then pick a different version of that habit.
-        <br />
-        Different people like different things. Find the most enjoyable version
-        of each habit you do. Make your habits fun!
-      </>
-    ),
-  },
-  {
-    title: "Aim to Be Great in 10 Years",
-    preview: "",
-  },
-  {
-    title: "Start Small",
-    preview: "",
-  },
-  {
-    title: "Everything is Imperfect",
-    preview: "",
-  },
-];
 export default function Home() {
   return (
     <div>
@@ -60,30 +33,7 @@ export default function Home() {
             <img src="https://placehold.co/400x600" width={400} height={400} />
           </div>
         </div>
-
-        <section className="max-w-6xl mx-auto px-4 py-16 w-full">
-          {/* Header */}
-          <div className="max-w-xl mb-12">
-            <h2 className="text-4xl font-serif text-gray-800 mb-4">
-              Daily Lessons
-            </h2>
-            <p className="text-lg text-gray-600">
-              Use Atoms to stay motivated and change your mindset with lessons
-              from James Clear, delivered daily.
-            </p>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
-            {lessons.map((lesson, i) => (
-              <LessonCard
-                key={i}
-                title={lesson.title}
-                preview={lesson.preview}
-              />
-            ))}
-          </div>
-        </section>
+        <Lessons />
         <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text and Buttons Column */}
           <div className="flex-1 max-w-xl">

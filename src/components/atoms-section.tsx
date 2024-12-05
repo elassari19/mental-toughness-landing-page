@@ -113,16 +113,16 @@ export default function AtomsSection() {
   };
 
   return (
-    <section className="bg-dark-gray text-white rounded-4xl lg:py-36 py-20 px-10 md:px-20 mx-4 -translate-y-[120px]">
-      <div className="max-w-5xl mx-auto space-y-14">
-        <h2 className="font-serif text-3xl leading-tight max-w-[35rem] break-keep">
-          Atoms is the only app built on scientifically-backed laws of habit
+    <section className="bg-dark-gray text-white rounded-l-2xl lg:rounded-2xl py-8 pt-[10rem] ml-3 lg:mx-3 lg:py-32 px-2 -translate-y-[120px]">
+      <div className="lg:ml-[15vw] mx-auto space-y-16">
+        <h2 className="font-serif text-3xl md:text-[2.7rem] lg:text-2xl leading-tight max-w-[44rem] break-keep px-6">
+          Atoms is the only app built on <br className="hidden lg:block"/> scientifically-backed laws of habit
           change
         </h2>
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex items-center space-x-10 overflow-x-auto overflow-y-hidden hide-scrollbars pr-[80%] snap-x snap-mandatory touch-pan-x select-none cursor-grab active:cursor-grabbing"
+            className="flex items-center space-x-10 overflow-y-hidden hide-scrollbars pr-[80%] snap-x snap-mandatory touch-pan-x select-none cursor-grab active:cursor-grabbing"
             style={{
               scrollbarWidth: "none",
               WebkitOverflowScrolling: "touch",
@@ -142,20 +142,20 @@ export default function AtomsSection() {
                   className="flex items-center space-x-2 snap-start relative select-none"
                   style={{ scrollSnapAlign: "start" }}
                 >
-                  <span className="text-[5rem] md:text-[10rem] lg:text-[14rem] text-yellow leading-none relative select-none">
+                  <span className="text-[7rem] font-semibold md:text-[10rem] lg:text-[14rem] text-yellow leading-none relative select-none">
                     {i + 1}.
                     {isActive && (
                       <Image
                         src={chalkCircle}
                         alt="Active item indicator"
-                        width={200}
-                        height={200}
-                        className="absolute origin-top-right left-0 top-1/2 -translate-y-1/2 z-10 object-contain w-full"
+                        width={500}
+                        height={500}
+                        className="absolute origin-top-right w-[40rem] left-0 top-1/2 -translate-y-1/2 z-10 object-contain"
                         draggable={false}
                       />
                     )}
                   </span>
-                  <span className="text-4xl md:text-7xl lg:text-huge font-semibold tracking-tight min-w-content whitespace-nowrap leading-none select-none">
+                  <span className="text-[2.7rem] md:text-7xl lg:text-huge font-semibold tracking-tight min-w-content whitespace-nowrap leading-none select-none">
                     {atom}
                   </span>
                 </div>
@@ -163,16 +163,16 @@ export default function AtomsSection() {
             })}
           </div>
         </div>
-        <div className="flex justify-end mt-8 space-x-4">
+        <div className="flex justify-end mt-12 mr-8 space-x-4 lg:mr-[20%]">
           <button
-            className="p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
+            className="md:w-8 md:h-8 lg:w-8 lg:h-8 lg:p-1 p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
             onClick={() => scrollTo("left")}
             disabled={activeIndex === 0}
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={24} className="" />
           </button>
           <button
-            className="p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
+            className="md:w-8 md:h-8 lg:w-8 lg:h-8 lg:p-1 p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
             onClick={() => scrollTo("right")}
             disabled={activeIndex === atoms.length - 1}
           >

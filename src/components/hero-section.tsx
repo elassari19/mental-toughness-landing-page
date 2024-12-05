@@ -1,36 +1,40 @@
 import Image from "next/image";
 import appStoreSvg from "@/app/images/appstore.svg";
 import playStoreSvg from "@/app/images/playstore.svg";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="container mx-auto px-4 py-16">
-      <div className="flex flex-col items-center justify-center space-y-2 pb-8">
+    <section className="container flex flex-col gap-12 mx-auto px-4 py-12">
+      <div className="flex flex-col items-center justify-center gap-3">
         <img
-          src="https://placehold.co/150x50"
+          src="https://cdn.prod.website-files.com/65534b324e87f7b0282adbc6/65855f5cb056acf359b11e00_logo-brand.svg"
           alt="Atoms app screenshot"
           width={150}
+          height={100}
+          className="w-[150px] md:w-[200px] lg:w-[100px]"
         />
-        <span>
-          {" "}
-          The <span className="font-serif italic">official</span> Atomic Habits
-          app
+        <span className="text-xl md:text-[1.65rem] lg:text-lg">
+          The <span className="font-serif italic">official</span> Atomic Habits app
         </span>
       </div>
-      <div className="flex flex-col items-center justify-between md:flex-row max-w-screen-lg mx-auto">
-        <div className="max-w-lg space-y-10 text-center md:text-left">
-          <h1 className="font-cooper text-5xl lg:text-6xl tracking-tight">
-            <span className="font-serif italic">Tiny changes,</span>
+      
+      <div className="flex flex-col items-center justify-between gap-12 lg:flex-row lg:gap-36 max-w-screen-lg mx-auto">
+        <div className="space-y-6">
+          <h1 className="font-cooper tracking-tight text-center lg:text-start">
+            <span className="font-serif italic text-4xl text-[2.6rem] md:text-6xl">Tiny changes,</span>
             <br />
-            remarkable results.
+            <span className="text-4xl text-[2.5rem] md:text-6xl lg:text-5xl">remarkable results.</span>
           </h1>
-          <p className="text-muted max-w-[30ch]">
-            Based on the easy yet proven habit change system from the NYT
-            best-seller by James Clear, Atoms is a habit app like no other.
+          <p className="text-muted text-center lg:text-start text-lg md:text-2xl lg:text-sm grid lg:-space-y-3">
+            <span>Based on the easy yet proven habit</span>
+            <span>change system from the NYT best-seller</span>
+            <span>by James Clear, Atoms is a habit app like</span>
+            <span>no other.</span>
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
-              href="#"
+          <div className="flex items-center justify-center lg:justify-start gap-8">
+            <Link
+              href="https://apps.apple.com/us/app/atoms-from-atomic-habits/id6474421906"
               className="transition-transform hover:scale-105 active:scale-95"
             >
               <Image
@@ -40,9 +44,9 @@ export default function HeroSection() {
                 height={50}
                 priority
               />
-            </a>
+            </Link>
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=app.getatoms.android"
               className="transition-transform hover:scale-105 active:scale-95"
             >
               <Image
@@ -55,19 +59,16 @@ export default function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="mt-10 md:mt-0 z-10">
-          <div className="relative mx-auto h-[600px] w-[300px] overflow-hidden rounded-[2.5rem] bg-gray-800 shadow-xl">
-            <div className="absolute inset-[3px] overflow-hidden rounded-[2.3rem] bg-white">
-              <img
-                src="https://placehold.co/294x594"
-                alt="Atoms app screenshot"
-                width={294}
-                height={594}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute left-1/2 top-0 h-6 w-20 -translate-x-1/2 rounded-b-xl bg-gray-800"></div>
-          </div>
+
+        <div className="relative min-h-[100vw] w-[50vw] lg:w-[25vw] lg:min-h-[50vw] flex items-center justify-center">
+      {/* iPhone Mockup Image */}
+          <img
+            src="https://placehold.co/294x594"
+            alt="Atoms app screenshot"
+            width={294}
+            height={594}
+            className="h-full w-full absolute z-10 object-cover rounded-4xl"
+          />
         </div>
       </div>
     </section>

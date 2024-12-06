@@ -8,6 +8,7 @@ import Lessons from "@/components/lessons";
 
 import React from "react";
 import HabitsSection from "@/components/habits-section";
+import ActionSection from "@/components/action-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AtomsSection />
       <UniqueSection />
       <HabitsSection />
+      <ActionSection />
       <Lessons />
       <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Text and Buttons Column */}

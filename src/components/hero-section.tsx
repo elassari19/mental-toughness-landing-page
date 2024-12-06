@@ -1,7 +1,3 @@
-import Image from "next/image";
-import appStoreSvg from "@/app/images/appstore.svg";
-import playStoreSvg from "@/app/images/playstore.svg";
-import Link from "next/link";
 import AppStoreButtons from "./app-store-buttons";
 
 export default function HeroSection() {
@@ -16,16 +12,21 @@ export default function HeroSection() {
           className="w-[150px] md:w-[200px] lg:w-[130px]"
         />
         <span className="text-xl md:text-[1.65rem] lg:text-lg">
-          The <span className="font-serif italic">official</span> Atomic Habits app
+          The <span className="font-serif italic">official</span> Atomic Habits
+          app
         </span>
       </div>
-      
+
       <div className="px-[3.5%] w-screen flex flex-col gap-12 items-center justify-between lg:flex-row max-w-screen-lg">
         <div className="space-y-6">
           <h1 className="font-cooper tracking-tight text-center lg:text-start lg:-mt-36">
-            <span className="font-serif italic text-4xl text-[2.6rem] md:text-6xl lg:text-[4.5vw]">Tiny changes,</span>
+            <span className="font-serif italic text-4xl text-[2.6rem] md:text-6xl lg:text-[4.5vw]">
+              Tiny changes,
+            </span>
             <br />
-            <span className="text-4xl text-[2.5rem] md:text-6xl lg:text-[4.5vw]">remarkable results.</span>
+            <span className="text-4xl text-[2.5rem] md:text-6xl lg:text-[4.5vw]">
+              remarkable results.
+            </span>
           </h1>
           <p className="text-muted text-center lg:text-start text-lg md:text-2xl lg:text-base grid lg:-space-y-2">
             <span>Based on the easy yet proven habit</span>

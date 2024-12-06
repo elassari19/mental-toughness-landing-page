@@ -8,7 +8,7 @@ interface LessonCardProps {
 
 const LessonCard = ({ title, icon: Icon = Book, preview }: LessonCardProps) => {
   return (
-    <div className="group min-h-[450px] h-full perspective">
+    <div className="min-w-full group min-h-[450px] h-full perspective">
       <div className="relative preserve-3d duration-200 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front side */}
         <div className="absolute inset-0 w-full h-full bg-light-cream rounded-2xl p-8 flex flex-col [backface-visibility:hidden]">
@@ -63,9 +63,9 @@ const lessons = [
 
 export default function Lessons() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16 w-full">
+    <section className="text-center px-4 py-16 w-full">
       {/* Header */}
-      <div className="max-w-xl mb-12">
+      <div className="mb-12">
         <h2 className="text-4xl font-serif text-gray-800 mb-4">
           Daily Lessons
         </h2>
@@ -75,7 +75,7 @@ export default function Lessons() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+      <div className="text-start grid grid-cols-3 grid-rows-1 gap-6">
         {lessons.map((lesson, i) => (
           <LessonCard key={i} title={lesson.title} preview={lesson.preview} />
         ))}

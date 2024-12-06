@@ -7,7 +7,7 @@ import clock from "./imgs/clock.png";
 import heart from "./imgs/heart.png";
 import tools from "./imgs/tools.png";
 import handshake from "./imgs/handshake.png";
-import { ArrowBigDown, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const whys = [
   {
@@ -29,11 +29,7 @@ const whys = [
     img: tools,
   },
   {
-    title: (
-      <>
-        We’re in it for the long-haul
-      </>
-    ),
+    title: <>We’re in it for the long-haul</>,
     description:
       "We support you in creating accountability and learning the mindsets essential to lasting positive change.",
     img: clock,
@@ -59,7 +55,7 @@ export default function UniqueSection() {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-    };  
+    };
   }, []);
 
   useEffect(() => {
@@ -69,7 +65,9 @@ export default function UniqueSection() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-index') || '0');
+            const index = parseInt(
+              entry.target.getAttribute("data-index") || "0"
+            );
             setActiveSlide(index);
           }
         });
@@ -80,7 +78,8 @@ export default function UniqueSection() {
       }
     );
 
-    const elements = scrollContainerRef.current.querySelectorAll('[data-index]');
+    const elements =
+      scrollContainerRef.current.querySelectorAll("[data-index]");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -91,8 +90,10 @@ export default function UniqueSection() {
       const slideWidth = scrollContainerRef.current.clientWidth;
 
       if (isDesktop) {
-        const targetElement = scrollContainerRef.current.querySelector(`[data-index="${index}"]`);
-        targetElement?.scrollIntoView({ behavior: 'smooth' });
+        const targetElement = scrollContainerRef.current.querySelector(
+          `[data-index="${index}"]`
+        );
+        targetElement?.scrollIntoView({ behavior: "smooth" });
       } else {
         scrollContainerRef.current.scrollLeft = index * slideWidth;
       }
@@ -102,7 +103,10 @@ export default function UniqueSection() {
 
   return (
     <section
-      className={"px-[5%] max-w-screen-xl mx-auto overflow-hidden" + (isDesktop ? "lg:h-screen" : "")}
+      className={
+        "px-[5%] max-w-screen-xl mx-auto overflow-hidden" +
+        (isDesktop ? "lg:h-screen" : "")
+      }
     >
       <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[1.5rem] text-center font-serif font-medium text-muted-foreground mb-12">
         Why we&apos;re different
@@ -170,7 +174,10 @@ export default function UniqueSection() {
 
         {/* Arrow scroll buttons */}
         <div className="hidden lg:block absolute z-50 cursor-pointer border border-gray-300 hover:border-gray-600 p-2 rounded-full bottom-16 left-[15vw] -translate-x-1/2">
-          <ChevronDown onClick={() => scrollToSlide(activeSlide + 1)} size={16} />
+          <ChevronDown
+            onClick={() => scrollToSlide(activeSlide + 1)}
+            size={16}
+          />
         </div>
 
         {/* Mobile Bullets */}

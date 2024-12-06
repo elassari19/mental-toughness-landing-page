@@ -7,6 +7,7 @@ import AppStoreButtons from "@/components/app-store-buttons";
 import Lessons from "@/components/lessons";
 
 import React from "react";
+import HabitsSection from "@/components/habits-section";
 
 export default function Home() {
   return (
@@ -14,24 +15,7 @@ export default function Home() {
       <HeroSection />
       <AtomsSection />
       <UniqueSection />
-      <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Text and Buttons Column */}
-        <div className="flex-1 max-w-xl">
-          <h3 className="text-2xl font-serif text-gray-800 mb-6 leading-relaxed">
-            Build good habits, break bad ones, and make better decisions in just
-            five good minutes a day. Get started today and cast a vote for
-            future you.
-          </h3>
-
-          {/* App Store Buttons */}
-          <AppStoreButtons />
-        </div>
-
-        {/* Illustration Column */}
-        <div className="flex-1 max-w-sm">
-          <img src="https://placehold.co/400x600" width={400} height={400} />
-        </div>
-      </div>
+      <HabitsSection />
       <Lessons />
       <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Text and Buttons Column */}

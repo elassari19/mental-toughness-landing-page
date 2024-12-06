@@ -7,6 +7,7 @@ import clock from "./imgs/clock.png";
 import heart from "./imgs/heart.png";
 import tools from "./imgs/tools.png";
 import handshake from "./imgs/handshake.png";
+import { ArrowBigDown, ChevronDown } from "lucide-react";
 
 const whys = [
   {
@@ -30,7 +31,7 @@ const whys = [
   {
     title: (
       <>
-        We’re in it for the <br /> long-haul
+        We’re in it for the long-haul
       </>
     ),
     description:
@@ -101,15 +102,15 @@ export default function UniqueSection() {
 
   return (
     <section
-      className={"pt-24 px-8 max-w-screen-xl mx-auto overflow-hidden" + (isDesktop ? " h-screen" : "")}
+      className={"px-[5%] max-w-screen-xl mx-auto overflow-hidden" + (isDesktop ? "lg:h-screen" : "")}
     >
-      <h2 className="text-2xl text-center font-serif font-medium text-muted-foreground mb-12">
+      <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[1.5rem] text-center font-serif font-medium text-muted-foreground mb-12">
         Why we&apos;re different
       </h2>
 
-      <div className="relative flex md:gap-8 md:h-[calc(100vh-180px)]">
+      <div className="relative flex lg:gap-8 lg:h-[calc(100vh-180px)] lg:px-[5rem]">
         {/* Bullets - Horizontal bottom on mobile, Vertical left on desktop */}
-        <div className="hidden md:flex flex-col justify-center gap-2 relative z-10 ml-4">
+        <div className="hidden lg:flex flex-col justify-center gap-2 relative z-10 ml-4">
           {whys.map((_, i) => (
             <button
               key={i}
@@ -124,7 +125,7 @@ export default function UniqueSection() {
         {/* Scroll Container */}
         <div
           ref={scrollContainerRef}
-          className="flex flex-row md:flex-col w-full overflow-x-auto md:overflow-y-auto md:overflow-x-hidden snap-x md:snap-y snap-mandatory scrollbar-hide md:h-full pb-12 md:pb-0"
+          className="flex flex-row lg:flex-col w-full overflow-x-auto lg:overflow-y-auto lg:overflow-x-hidden snap-x lg:snap-y snap-mandatory scrollbar-hide lg:h-full pb-12 lg:pb-0"
           style={{ scrollBehavior: "smooth" }}
           onScroll={(e) => {
             if (!isDesktop) {
@@ -135,18 +136,20 @@ export default function UniqueSection() {
             }
           }}
         >
+          <div className="bg-[#f2ece0] w-[14rem] h-[16rem] rounded-full absolute top-2/3 lg:top-1/2 left-1/2 -lg:left-1/3 -translate-x-1/2 lg:translate-x-[12vw] -translate-y-1/2" />
+
           {whys.map((why, i) => (
             <div
               key={i}
               data-index={i}
-              className="flex-none w-full md:min-h-full snap-start snap-always"
+              className="flex-none w-full md:min-h-full snap-start snap-always z-10"
             >
-              <div className="grid md:grid-cols-2 gap-4 lg:gap-8 h-full px-4 md:px-8 py-4">
-                <div className="flex flex-col justify-center max-w-[64ch] space-y-10 mx-auto md:mx-0">
-                  <h3 className="text-4xl lg:text-huge text-center md:text-left font-bold leading-[0.9] tracking-tighter hyphens-none">
+              <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 h-full py-4">
+                <div className="flex flex-col justify-center space-y-10 mx-auto lg:mx-0">
+                  <h3 className="text-[2.75rem] md:text-[3.3rem] lg:text-[5rem] text-center lg:text-left font-bold leading-[0.9] tracking-tighter hyphens-none">
                     {why.title}
                   </h3>
-                  <p className="text-muted max-w-[40ch] text-center md:text-left mx-auto md:mx-0">
+                  <p className="text-muted text-lg md:text-2xl lg:text-base text-center lg:text-left lg:mx-0 max-w-2xl">
                     {why.description}
                   </p>
                 </div>
@@ -157,7 +160,7 @@ export default function UniqueSection() {
                     width={isDesktop ? 400 : 250}
                     height={isDesktop ? 400 : 250}
                     priority
-                    className="w-[250px] md:w-full h-auto max-w-md"
+                    className="w-[250px] xl:w-full h-auto max-w-xl"
                   />
                 </div>
               </div>
@@ -165,8 +168,13 @@ export default function UniqueSection() {
           ))}
         </div>
 
+        {/* Arrow scroll buttons */}
+        <div className="hidden lg:block absolute z-50 cursor-pointer border border-gray-300 hover:border-gray-600 p-2 rounded-full bottom-16 left-[15vw] -translate-x-1/2">
+          <ChevronDown onClick={() => scrollToSlide(activeSlide + 1)} size={16} />
+        </div>
+
         {/* Mobile Bullets */}
-        <div className="flex md:hidden justify-center gap-2 absolute bottom-0 left-0 right-0">
+        <div className="flex lg:hidden justify-center gap-2 absolute bottom-0 left-0 right-0">
           {whys.map((_, i) => (
             <button
               key={i}

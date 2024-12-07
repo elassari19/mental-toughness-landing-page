@@ -42,7 +42,7 @@ const lessons = [
         the beginning.
         <br />
         <br />
-        It's easy to get excited when thinking about the habits you want to
+        It&apos;s easy to get excited when thinking about the habits you want to
         change...
       </span>
     ),

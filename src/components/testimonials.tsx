@@ -59,7 +59,7 @@ export default function Testimonials() {
 
         <div className="w-full space-y-8">
           <p className="text-white text-lg lg:text-base lg:max-w-sm leading-relaxed">
-            "{testimonial.quote}"
+            &quot;{testimonial.quote}&quot;
           </p>
           <div className="text-sm text-white">
             <p className="font-bold text-lg lg:text-base">

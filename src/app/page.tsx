@@ -3,7 +3,6 @@ import HeroSection from "@/components/hero-section";
 import UniqueSection from "@/components/unique section";
 import Testimonials from "@/components/testimonials";
 import Footer from "@/components/footer";
-import AppStoreButtons from "@/components/app-store-buttons";
 import Lessons from "@/components/lessons";
 
 import React from "react";

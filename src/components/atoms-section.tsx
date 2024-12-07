@@ -116,8 +116,8 @@ export default function AtomsSection() {
     <section className="bg-dark-gray text-white rounded-l-2xl lg:rounded-2xl py-8 pt-[10rem] ml-3 lg:mx-3 lg:py-32 px-2 -translate-y-[120px]">
       <div className="lg:ml-[15vw] mx-auto space-y-16">
         <h2 className="font-serif text-3xl md:text-[2.7rem] lg:text-2xl leading-tight max-w-[44rem] break-keep px-6">
-          Atoms is the only app built on <br className="hidden lg:block"/> scientifically-backed laws of habit
-          change
+          Atoms is the only app built on <br className="hidden lg:block" />{" "}
+          scientifically-backed laws of habit change
         </h2>
         <div className="relative">
           <div
@@ -165,14 +165,14 @@ export default function AtomsSection() {
         </div>
         <div className="flex justify-end mt-12 mr-8 space-x-4 lg:mr-[20%]">
           <button
-            className="md:w-8 md:h-8 lg:w-8 lg:h-8 lg:p-1 p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
+            className="md:w-8 md:h-8 lg:w-8 lg:h-8 md:p-1 p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
             onClick={() => scrollTo("left")}
             disabled={activeIndex === 0}
           >
             <ChevronLeft size={24} className="" />
           </button>
           <button
-            className="md:w-8 md:h-8 lg:w-8 lg:h-8 lg:p-1 p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
+            className="md:w-8 md:h-8 lg:w-8 lg:h-8 md:p-1 p-2 bg-white text-gray-900 rounded-full disabled:opacity-50"
             onClick={() => scrollTo("right")}
             disabled={activeIndex === atoms.length - 1}
           >

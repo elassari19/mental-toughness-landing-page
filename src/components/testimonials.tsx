@@ -44,27 +44,28 @@ export default function Testimonials() {
     }, 300);
   };
   return (
-    <section className="bg-dark-gray text-white rounded-4xl py-36 px-20 mx-4">
-      <h2 className="font-serif text-4xl mb-16 text-left p-8">
+    <section className="flex flex-col justify-between lg:px-[10vw] bg-dark-gray text-white rounded-2xl my-16 mx-4 h-[120vw] lg:h-[80vh] p-8 pt-20">
+      <h2 className="hidden lg:block text-2xl">
         See what people are saying about Atoms
       </h2>
-      <div className="w-full">
-        <div className="p-8 rounded-2xl">
-          <div
-            className={`space-y-6 flex flex-col md:flex-row gap-8 ${
-              animate ? "animate-fade-out" : ""
-            }`}
-          >
-            <h3 className="text-7xl w-full">{testimonial.title}</h3>
-            <div className="w-full space-y-8">
-              <p className="text-white text-xl leading-relaxed">
-                {testimonial.quote}
-              </p>
-              <div className="text-sm text-white">
-                <p className="font-bold">{testimonial.author}</p>
-                <p>{testimonial.source}</p>
-              </div>
-            </div>
+      <div
+        className={`flex flex-col lg:flex-row justify-between gap-12 ${
+          animate ? "animate-fade-out" : ""
+        }`}
+      >
+        <h3 className="text-[2.5rem] w-full lg:text-5xl">
+          {testimonial.title}
+        </h3>
+
+        <div className="w-full space-y-8">
+          <p className="text-white text-lg lg:text-base lg:max-w-sm leading-relaxed">
+            "{testimonial.quote}"
+          </p>
+          <div className="text-sm text-white">
+            <p className="font-bold text-lg lg:text-base">
+              {testimonial.author}
+            </p>
+            <p className=" text-lg lg:text-base">{testimonial.source}</p>
           </div>
         </div>
       </div>
@@ -74,7 +75,7 @@ export default function Testimonials() {
             width="100%"
             viewBox="0 0 210 38"
             fill="none"
-            className="max-w-[200px] fill-current"
+            className="max-w-[150px] fill-current"
             onClick={nextReview}
           >
             <path

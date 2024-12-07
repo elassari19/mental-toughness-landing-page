@@ -70,8 +70,8 @@ const StickyParallaxContainer = ({
       className={`relative ${className}`}
       style={{ height }}
     >
-      <div className="sticky left-0 top-40 w-full h-[50vh]">
-        <div className="h-full w-full z-[2] bg-dark-gray"></div>
+      <div className="sticky left-0 top-40 w-full h-[60vh]">
+        <div className="h-full w-full z-[2] bg-dark-gray rounded-2xl"></div>
         <Image
           src={actionSvg}
           alt="action svg"

@@ -44,7 +44,7 @@ export default function Testimonials() {
     }, 300);
   };
   return (
-    <section className="flex flex-col justify-between lg:px-[10vw] bg-dark-gray text-white rounded-2xl my-16 mx-4 h-[120vw] lg:h-[80vh] p-8 pt-20">
+    <section className="flex flex-col justify-between lg:px-[10vw] bg-dark-gray text-white rounded-2xl my-16 mx-4 h-fit md:h-[33rem] lg:h-[80vh] p-8 pt-20">
       <h2 className="hidden lg:block text-2xl">
         See what people are saying about Atoms
       </h2>

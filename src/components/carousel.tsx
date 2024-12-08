@@ -114,7 +114,9 @@ function Carousel({ slides }: IProps) {
       </div>
       <div
         className="absolute max-w-[95vw] left-0 right-0 flex justify-center"
-        style={{ bottom: `${targetTop >= 270 ? targetTop + 50 : targetTop}px` }}
+        style={{
+          bottom: `${targetTop >= 270 ? targetTop + 50 : targetTop >= 220 ? targetTop + 65 : targetTop}px`,
+        }}
       >
         {slides.map((_, index) => (
           <button

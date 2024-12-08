@@ -2,6 +2,23 @@ import { Book, ChevronRight, LucideIcon } from "lucide-react";
 
 const lessons = [
   {
+    title: "Start Small",
+    preview: (
+      <span>
+        When it comes to building better habits, the most important decision is
+        choosing the right habit to work on.
+        <br />
+        <br />
+        One of the most common mistakes people make is trying to do too much in
+        the beginning.
+        <br />
+        <br />
+        It&apos;s easy to get excited when thinking about the habits you want to
+        change...
+      </span>
+    ),
+  },
+  {
     title: "Make Your Habits Fun",
     preview: (
       <span>
@@ -27,23 +44,6 @@ const lessons = [
         achieve. This can include building a business, cultivating a loving
         relationship, writing a book, getting in the best shape of your life,
         raising a family, and more...
-      </span>
-    ),
-  },
-  {
-    title: "Start Small",
-    preview: (
-      <span>
-        When it comes to building better habits, the most important decision is
-        choosing the right habit to work on.
-        <br />
-        <br />
-        One of the most common mistakes people make is trying to do too much in
-        the beginning.
-        <br />
-        <br />
-        It&apos;s easy to get excited when thinking about the habits you want to
-        change...
       </span>
     ),
   },
@@ -77,7 +77,7 @@ const LessonCard = ({ title, icon: Icon = Book, preview }: LessonCardProps) => {
           <div className="pb-2 pl-2">
             <Icon className="h-7 w-7" />
           </div>
-          <h3 className="text-2xl lg:text-[1.75rem] font-serif mb-auto">
+          <h3 className="text-3xl lg:text-[1.75rem] font-serif mb-auto">
             {title}
           </h3>
           <button className="mt-6 px-4 inline-flex justify-between items-center hover:text-gray-900 transition-colors">
@@ -91,7 +91,7 @@ const LessonCard = ({ title, icon: Icon = Book, preview }: LessonCardProps) => {
           <h4 className="text-xl lg:text-xs font-semibold font-serif mb-4">
             Preview
           </h4>
-          <div className="prose prose-invert prose-sm max-w-none mb-auto lg:text-sm">
+          <div className="prose prose-invert prose-sm max-w-none mb-auto text-sm lg:text-sm">
             {preview}
           </div>
           <button className="mt-6 inline-flex items-center transition-colors hover:text-accent lg:text-sm">
@@ -118,8 +118,8 @@ export default function Lessons() {
         </p>
       </div>
 
-      <div className="overflow-x-auto no-scrollbar px-0">
-        <div className="w-[280vw] md:w-[180vw] lg:w-[77vw] text-start grid grid-cols-4 grid-rows-1 gap-4">
+      <div className="overflow-x-auto overflow-y-hidden no-scrollbar px-0">
+        <div className="w-[70rem] md:w-[75rem] lg:w-[67rem] text-start grid grid-cols-4 grid-rows-1 gap-4">
           {lessons.map((lesson, i) => (
             <LessonCard key={i} title={lesson.title} preview={lesson.preview} />
           ))}

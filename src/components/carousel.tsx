@@ -45,7 +45,7 @@ function Carousel({ slides }: IProps) {
     setIsDragging(false);
     const movedBy = currentTranslate - prevTranslate;
 
-    if (Math.abs(movedBy) > 50) {
+    if (Math.abs(movedBy) > 20) {
       if (movedBy < 0 && activeIndex < slides.length - 1) {
         setActiveIndex(activeIndex + 1);
       } else if (movedBy > 0 && activeIndex > 0) {

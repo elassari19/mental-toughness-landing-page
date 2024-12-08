@@ -8,6 +8,7 @@ import heart from "./imgs/heart.png";
 import tools from "./imgs/tools.png";
 import handshake from "./imgs/handshake.png";
 import { ChevronDown } from "lucide-react";
+import unique from "../app/images/unique.svg";
 
 const whys = [
   {
@@ -119,7 +120,7 @@ export default function UniqueSection() {
             <button
               key={i}
               className={`w-2 h-2 rounded-full transition-all ${
-                i === activeSlide ? "bg-black h-4" : "bg-gray-300"
+                i === activeSlide ? "bg-[#ffc566] h-4" : "bg-gray-300"
               }`}
               onClick={() => scrollToSlide(i)}
             />
@@ -140,7 +141,11 @@ export default function UniqueSection() {
             }
           }}
         >
-          <div className="bg-[#f2ece0] w-[14rem] h-[16rem] rounded-full absolute top-2/3 lg:top-1/2 left-1/2 -lg:left-1/3 -translate-x-1/2 lg:translate-x-[12vw] -translate-y-1/2" />
+          <Image
+            src={unique}
+            alt="unique image"
+            className="w-[14rem] h-[16rem] absolute top-2/3 lg:top-1/2 left-1/2 -lg:left-1/3 -translate-x-1/2 lg:translate-x-[12vw] -translate-y-1/2"
+          />
 
           {whys.map((why, i) => (
             <div
@@ -173,12 +178,14 @@ export default function UniqueSection() {
         </div>
 
         {/* Arrow scroll buttons */}
-        <div className="hidden lg:block absolute z-50 cursor-pointer border border-gray-300 hover:border-gray-600 p-2 rounded-full bottom-16 left-[15vw] -translate-x-1/2">
-          <ChevronDown
-            onClick={() => scrollToSlide(activeSlide + 1)}
-            size={16}
-          />
-        </div>
+        {activeSlide < whys.length - 1 && (
+          <div className="hidden lg:block absolute z-50 cursor-pointer border border-gray-300 hover:border-gray-600 p-2 rounded-full bottom-16 left-[15vw] -translate-x-1/2">
+            <ChevronDown
+              onClick={() => scrollToSlide(activeSlide + 1)}
+              size={16}
+            />
+          </div>
+        )}
 
         {/* Mobile Bullets */}
         <div className="flex lg:hidden justify-center gap-2 absolute bottom-0 left-0 right-0">
@@ -186,7 +193,7 @@ export default function UniqueSection() {
             <button
               key={i}
               className={`w-2 h-2 rounded-full transition-all ${
-                i === activeSlide ? "bg-black w-4" : "bg-gray-300"
+                i === activeSlide ? "bg-[#ffc566] w-4" : "bg-gray-300"
               }`}
               onClick={() => scrollToSlide(i)}
             />

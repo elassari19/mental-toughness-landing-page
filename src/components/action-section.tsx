@@ -80,6 +80,7 @@ const ActionSection = () => {
         </div>
       </div>
 
+      {/* large screens */}
       <div className="hidden lg:block h-[280vh] relative">
         <StickyParallaxContainer slides={slides} />
       </div>

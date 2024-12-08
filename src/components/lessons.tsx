@@ -70,19 +70,19 @@ interface LessonCardProps {
 
 const LessonCard = ({ title, icon: Icon = Book, preview }: LessonCardProps) => {
   return (
-    <div className="!max-w-xs lg:max-w-[12rem] group min-h-[450px] lg:min-h-[30vw] perspective">
+    <div className="max-w-xs lg:max-w-[16.5rem] group min-h-[450px] lg:min-h-[30vw] perspective">
       <div className="relative preserve-3d duration-200 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front side */}
-        <div className="absolute inset-0 w-full h-full bg-light-cream rounded-2xl p-8 lg:px-4 flex flex-col [backface-visibility:hidden]">
-          <div className="mb-4">
-            <Icon className="h-6 w-6" />
+        <div className="absolute inset-0 w-full h-full bg-light-cream rounded-2xl p-8 pb-4 lg:px-3 flex flex-col [backface-visibility:hidden]">
+          <div className="pb-2 pl-2">
+            <Icon className="h-7 w-7" />
           </div>
-          <h3 className="text-2xl lg:text-lg font-semibold font-serif mb-auto">
+          <h3 className="text-2xl lg:text-[1.75rem] font-serif mb-auto">
             {title}
           </h3>
-          <button className="mt-6 inline-flex items-center hover:text-gray-900 transition-colors">
-            Read preview
-            <ChevronRight className="ml-2 h-4 w-4" />
+          <button className="mt-6 px-4 inline-flex justify-between items-center hover:text-gray-900 transition-colors">
+            <span className="text-sm">Read preview</span>
+            <ChevronRight className="ml-2 h-8 w-8 p-2 bg-white rounded-full" />
           </button>
         </div>
 
@@ -106,7 +106,7 @@ const LessonCard = ({ title, icon: Icon = Book, preview }: LessonCardProps) => {
 
 export default function Lessons() {
   return (
-    <section className="text-center px-4 py-48 w-full lg:px-[10vw]">
+    <section className="text-center px-4 py-48 w-full lg:px-[11.5vw]">
       {/* Header */}
       <div className="mb-12 flex flex-col items-center text-center lg:items-start lg:text-start lg:px-20">
         <h2 className="text-4xl md:text-5xl lg:text-2xl font-serif text-gray-800 mb-4">
@@ -119,7 +119,7 @@ export default function Lessons() {
       </div>
 
       <div className="overflow-x-auto no-scrollbar px-0">
-        <div className="w-[280vw] md:w-[180vw] lg:w-[80vw] text-start grid grid-cols-4 grid-rows-1 gap-6">
+        <div className="w-[280vw] md:w-[180vw] lg:w-[77vw] text-start grid grid-cols-4 grid-rows-1 gap-4">
           {lessons.map((lesson, i) => (
             <LessonCard key={i} title={lesson.title} preview={lesson.preview} />
           ))}

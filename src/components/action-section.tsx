@@ -8,7 +8,8 @@ import StickyParallaxContainer from "./StickyParallaxContainer";
 
 const slides = [
   {
-    image: "https://placehold.co/200x200",
+    image:
+      "https://cdn.prod.website-files.com/65534b324e87f7b0282adbc6/658ed50dd741cb821bff3f64_img_sec4_screen1-p-500.jpg",
     caption: "Not just any habit",
     title: "Identity-based habits",
     description: (
@@ -23,7 +24,8 @@ const slides = [
     ),
   },
   {
-    image: "https://placehold.co/200x200",
+    image:
+      "https://cdn.prod.website-files.com/65534b324e87f7b0282adbc6/658ed50dcc289cdec0337c4b_img_sec4_screen2-p-500.jpg",
     caption: "Supportive environment",
     title: "A journey with support",
     description: (
@@ -35,7 +37,8 @@ const slides = [
     ),
   },
   {
-    image: "https://placehold.co/200x200",
+    image:
+      "https://cdn.prod.website-files.com/65534b324e87f7b0282adbc6/663540a821c5a601c46d77ab_img_sec4_screen3-v2-p-500.png",
     caption: "Habit reminders",
     title: "Everyone needs a nudge",
     description: (
@@ -77,7 +80,7 @@ const ActionSection = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block">
+      <div className="hidden lg:block h-[280vh] relative">
         <StickyParallaxContainer slides={slides} />
       </div>
     </div>

@@ -16,6 +16,10 @@ function Carousel({ slides }: IProps) {
   const [currentTranslate, setCurrentTranslate] = useState(0);
   const [prevTranslate, setPrevTranslate] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const targetRef = useRef<HTMLDivElement>(null);
+  const targetTop = targetRef.current?.getBoundingClientRect().height || 300;
+
+  console.log("targetTop", targetTop);
 
   const handleDragStart = (event: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
@@ -32,7 +36,7 @@ function Carousel({ slides }: IProps) {
     const clientX =
       "touches" in event ? event.touches[0].clientX : event.clientX;
     const diff = clientX - startX;
-    const translate = prevTranslate + diff / 4;
+    const translate = prevTranslate + diff / 6;
 
     setCurrentTranslate(translate);
   };
@@ -41,7 +45,7 @@ function Carousel({ slides }: IProps) {
     setIsDragging(false);
     const movedBy = currentTranslate - prevTranslate;
 
-    if (Math.abs(movedBy) > 100) {
+    if (Math.abs(movedBy) > 50) {
       if (movedBy < 0 && activeIndex < slides.length - 1) {
         setActiveIndex(activeIndex + 1);
       } else if (movedBy > 0 && activeIndex > 0) {
@@ -90,7 +94,11 @@ function Carousel({ slides }: IProps) {
                 draggable="false"
               />
             </div>
-            <div className="flex flex-col items-center text-center mt-32 md:mt-[25vh] gap-4 px-4">
+
+            <div
+              ref={targetRef}
+              className="flex flex-col items-center text-center mt-32 md:mt-[25vh] gap-4 px-4"
+            >
               <p className="text-[1.5rem] md:text-[1.75rem] font-serif">
                 {slide.caption}
               </p>
@@ -104,7 +112,10 @@ function Carousel({ slides }: IProps) {
           </div>
         ))}
       </div>
-      <div className="absolute max-w-[95vw] bottom-[45%] translate-y-1/2 md:top-[110vh] left-0 right-0 flex justify-center">
+      <div
+        className="absolute max-w-[95vw] left-0 right-0 flex justify-center"
+        style={{ bottom: `${targetTop >= 270 ? targetTop + 50 : targetTop}px` }}
+      >
         {slides.map((_, index) => (
           <button
             key={index}

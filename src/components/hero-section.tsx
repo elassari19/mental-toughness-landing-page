@@ -18,7 +18,7 @@ export default function HeroSection() {
       </div>
 
       <div className="px-[3.5%] w-screen flex flex-col gap-12 items-center justify-between lg:flex-row max-w-screen-lg">
-        <div className="space-y-6">
+        <div className="space-y-6 w-1/2">
           <h1 className="font-cooper tracking-tight text-center lg:text-start lg:-mt-36">
             <span className="font-serif italic text-4xl text-[2.6rem] md:text-6xl lg:text-[4.5vw]">
               Tiny changes,
@@ -37,14 +37,27 @@ export default function HeroSection() {
           <AppStoreButtons />
         </div>
 
-        <div className="relative min-h-[100vw] w-[50vw] lg:w-[25vw] xl:min-h-[45vw] xl:w-[22.5vw] lg:min-h-[50vw] flex items-center justify-center">
+        <div className="relative min-h-[100rem] w-[50vw] lg:w-1/2 xl:min-h-[50vw] xl:w-[25vw] lg:min-h-[50vw] flex items-center justify-center">
           <img
-            src="https://placehold.co/294x594"
+            src="https://cdn.prod.website-files.com/65534b324e87f7b0282adbc6/659c5189c93ac18fe3e5f7f1_iphone-mockup-p-500.png"
             alt="Atoms app screenshot"
             width={294}
             height={594}
-            className="h-full w-full absolute z-10 object-cover rounded-4xl"
+            className="h-full w-full absolute z-[1] object-cover rounded-4xl"
           />
+          <img
+            src="https://cdn.prod.website-files.com/65534b324e87f7b0282adbc6/658592d120fedbf67a06ae85_home-screen.png"
+            alt="Atoms app screenshot"
+            width={294}
+            height={594}
+            className="h-[74%] w-[67%] top-14 absolute z-[2] object-cover rounded-4xl"
+          />
+          <video
+            autoPlay
+            muted
+            src="https://content.atomscontent.com/mobile_pebble_hero_uncropped_24135de4a9.mp4"
+            className="absolute w-[80rem] h-[30rem] object-cover"
+          ></video>
         </div>
       </div>
     </section>
